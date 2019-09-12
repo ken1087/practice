@@ -1,0 +1,141 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kang homework</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+    	.insert_box{
+    		display: grid;
+    		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    		grid-gap: 10px;
+    	}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/datainsert" method="POST" onsubmit="return join()">
+        	<div  class="insert_box">
+	        	<div class="form-group">
+	            	<label for="num">number</label>
+		        	<input type="text" name="num" autocomplete="off" id="num"  required="required">
+		        </div>
+		        <div class="form-group">
+	                <label for="userid">userid</label>
+		            <input type="text" name="userid" autocomplete="off" id="userid"  required="required">
+		        </div>
+		        <div class="form-group">
+	               	<label for="stdnum">stdnum</label>
+		            <input type="text" name="stdnum" autocomplete="off" id="stdnum"  required="required">
+		        </div>
+		        <div class="form-group">
+	                <label for="mynum">mynum</label>
+		            <input type="text" name="mynum" autocomplete="off" id="mynum"  required="required">
+		        </div>
+		        <div class="form-group">
+	                <label for="phone">phone</label>
+		            <input type="text" name="phone" autocomplete="off" id="phone" required="required">
+				</div>
+				<div class="form-group">
+	                <label for="name">name</label>
+		            <input type="text" name="name" autocomplete="off" required="required">
+		        </div>
+		        <div class="form-group">
+	                <label for="password">password</label>
+		            <input type="text" name="password" autocomplete="off" required="required">
+		        </div>
+		        <div class="form-group">
+	                <label for="addr">address</label>
+		            <input type="text" name="addr" autocomplete="off" required="required">
+		        </div>
+		        <div class="form-group">
+	                <label for="title">title</label>
+		            <input type="text" name="title" autocomplete="off" required="required">
+		        </div>
+		        <div class="form-group">
+	                <label for="content">content</label>
+		            <input type="text" name="content" autocomplete="off"  required="required">
+		        </div>
+		        <div class="form-group">
+	                	<label for="country">country</label>
+		            <input type="text" name="country" autocomplete="off" required="required">
+		        </div>
+		        <div class="form-group">
+	               	<label for="email">email</label>
+		            <input type="text" name="email" autocomplete="off"  required="required">
+		        </div>    
+		        <div class="form-group">
+	              	<label for="gender">gender</label>
+		            <input type="text" name="gender" autocomplete="off"  required="required">
+		        </div>
+	       	</div>
+	        <div>
+	        	<div><input type="submit" value="insert"></div>
+	        	<input type="button" value="check" id="checkid">
+	        </div>
+        </form>  
+        
+    </div>
+    <script>
+    	var check = 1;
+		// 프라이머리 키 중복 체크
+    	$("#checkid").click(function(){
+        		var num_element 			= 		document.querySelector("#num");
+        		var userid_element 		= 		document.querySelector("#userid");
+        		var stdnum_element 		= 		document.querySelector("#stdnum");
+        		var mynum_element 		= 		document.querySelector("#mynum");
+        		var phone_element 		= 		document.querySelector("#phone");
+        		
+                var num 		= 		num_element.value;
+                var userid 		= 		userid_element.value;
+                var stdnum 	= 		stdnum_element.value;
+                var mynum 	= 		mynum_element.value;
+                var phone 		= 		phone_element.value;
+		
+                $.ajax({
+                    
+                    url:'/checkid',
+                    headers: { 
+                        "Content-Type": "application/json",                    
+                    },
+                    type: 'POST',
+                    data: JSON.stringify({
+                        'num' : num,
+                        'userid' : userid,
+                        'stdnum' : stdnum,
+                        'mynum' : mynum,
+                        'phone' : phone
+                    }),
+                    success: function (obj) {
+                        if(1 == obj){
+                            alert("使用可能"); 
+                            check=0;                
+                        }else{
+                            alert("重複");
+                          	check=1;
+                        }
+                    },
+                    error: function () {               
+                        alert("error");
+                       
+                    }
+                })  
+                
+      
+        })
+    	
+        function join(){
+			if(check == 1){
+				alert("重複チェックしてください");
+				return false;
+			}
+        }
+    </script>
+</body>
+</html>

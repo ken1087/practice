@@ -1,0 +1,5 @@
+package com.cos.pratice.dao;
+
+public class UserDAO {
+
+}

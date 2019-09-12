@@ -1,0 +1,9 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+
+mvc:
+  view:
+    prefix: webapp/WEB-INF/views/
+    suffix: .jsp

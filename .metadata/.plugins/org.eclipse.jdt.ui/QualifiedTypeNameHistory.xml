@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.EmbeddedId"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.CreationTimestamp"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+<fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+<fullyQualifiedTypeName name="javax.persistence.Embeddable"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.cos.pratice.util.MyQuery"/>
+<fullyQualifiedTypeName name="com.cos.pratice.util.ProPertySource"/>
+<fullyQualifiedTypeName name="com.cos.pratice.util.Util"/>
+<fullyQualifiedTypeName name="com.cos.pratice.dao.UserDAO"/>
+<fullyQualifiedTypeName name="com.cos.pratice.domain.Users"/>
+<fullyQualifiedTypeName name="com.cos.pratice.domain.UsersPk"/>
+</qualifiedTypeNameHistroy>

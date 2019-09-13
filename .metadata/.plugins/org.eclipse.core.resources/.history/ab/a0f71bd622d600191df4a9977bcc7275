@@ -25,7 +25,7 @@ public class UserDAO{
 		EntityManager em = emf.createEntityManager();	//EntityManager　宣言
 		EntityTransaction tx = em.getTransaction();	//Transaction　宣言
 
-		tx.begin();		//Transactionが始まる
+		tx.begin();
 		try {
 			Users u = new Users();								 //User　Object生成
 			u.setUserpk(userpk);
@@ -41,7 +41,7 @@ public class UserDAO{
 			u.setUpdateDate(user.getUpdateDate());			//要請した値をSETする
 			
 			em.persist(u);	//Save
-			tx.commit();	//Insert後、Commit
+			tx.commit();	//Commit
 			
 		}catch (Exception e) {
 			
@@ -53,8 +53,8 @@ public class UserDAO{
 
 	//																				Find 	All
 	public List<HashMap<String, String[]>> findAllList(){
-		EntityManagerFactory emf   = Persistence.createEntityManagerFactory("hello");	//META-INFにあるPersistence.xml読み込む
-		EntityManager em 			  = emf.createEntityManager();	//EntityManager　宣言
+		EntityManagerFactory emf   = Persistence.createEntityManagerFactory("hello");
+		EntityManager em 			  = emf.createEntityManager();
 	
 		ApplicationContext context = new AnnotationConfigApplicationContext(ProPertySource.class);	//SQL文があるPropertiesファイルを読み込んでるClassを呼び出す
 		MyQuery qry = context.getBean("myquery", MyQuery.class);	//SQL文を保存してるObjectを呼び出す
@@ -72,9 +72,9 @@ public class UserDAO{
 		}catch (Exception e) {
 			
 		}finally {
-			em.close();		//　EntityManagerをClose
+			em.close();
 		}
-		emf.close();		//EntityManagerFactoryをClose
+		emf.close();
 		
 		return null;	
 	}

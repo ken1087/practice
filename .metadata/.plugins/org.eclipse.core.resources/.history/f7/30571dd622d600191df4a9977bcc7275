@@ -1,0 +1,16 @@
+package com.cos.pratice.util;
+
+public class MyQuery {
+	
+	private String selectall;	//
+	
+	
+	
+	public String getSelectall() {
+		return selectall;
+	}
+	public void setSelectall(String selectall) {
+		this.selectall 	= 		selectall;
+	}
+	
+}

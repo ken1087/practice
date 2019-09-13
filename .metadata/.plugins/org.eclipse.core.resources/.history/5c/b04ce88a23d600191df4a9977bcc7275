@@ -25,7 +25,7 @@ public class UserDAO{
 		EntityManager em = emf.createEntityManager();	//EntityManager　宣言
 		EntityTransaction tx = em.getTransaction();	//Transaction　宣言
 
-		tx.begin();		//Transactionが始まる
+		tx.begin();
 		try {
 			Users u = new Users();								 //User　Object生成
 			u.setUserpk(userpk);
@@ -41,7 +41,7 @@ public class UserDAO{
 			u.setUpdateDate(user.getUpdateDate());			//要請した値をSETする
 			
 			em.persist(u);	//Save
-			tx.commit();	//Insert後、Commit
+			tx.commit();	//Commit
 			
 		}catch (Exception e) {
 			

@@ -29,7 +29,6 @@ public class UserListController {
 	UserDAO userDAO;
 	
 	String tag = "UsersListController : ";
-	
 	//User select*
 	@GetMapping("/homework") //http://localhost:8000/homeworkの場合
 	public String home(Model model){
@@ -42,6 +41,8 @@ public class UserListController {
 		/////////////////////////////////////////////////////////////////( /homework )//////////////////////////////////////////////
 	}
 	
+	
+
 	@GetMapping("/search")	// http://localhost:8000/searchの場合
 	public String search(Model model, String num,String userid,String stdnum,String mynum,String phone){	//5個のPrimary Keyのデータを要請
 		
@@ -55,7 +56,13 @@ public class UserListController {
 		if(stdnum.equals("")) 	{stdnum = null;}//Stdnumが””の場合、Nullにする。
 		if(mynum.equals("")) 	{mynum = null;}//Mynumが””の場合、Nullにする。
 		if(phone.equals("")) 	{phone = null;}//Phoneが””の場合、Nullにする。
-
+		
+		System.out.println(tag+"Num : "+num);
+		System.out.println(tag+"Userid : "+userid);
+		System.out.println(tag+"stdnum : "+stdnum);
+		System.out.println(tag+"mynum : "+mynum);
+		System.out.println(tag+"phone : "+phone);
+		
 		String[] numarr 		= 		new String[user.size()];	//Numの配列変数宣言　（String)
 		String[] useridarr 	= 		new String[user.size()];	//Useridの配列変数宣言　（String)
 		String[] stdnumarr 	= 		new String[user.size()];	//Stdnumの配列変数宣言　（String)
@@ -65,10 +72,10 @@ public class UserListController {
 		for(int i =0; i<user.size(); i++) {		//MapのKeyを取る
 			String[] primary 		= 		null;		//String配列変数宣言
 			String primaryKey 	= 		null;		//MapのKeyの変数
-			Set set 					= 		user.get(i).keySet();	//UserのIndexのKeyを呼び出す  SetにKeyのObjectが存在してる
-			Iterator iterator 		= 		set.iterator();	//IteratorのInterfaceで探す準備
-			while(iterator.hasNext()){					//順番で探す
-			  primaryKey = (String)iterator.next();	//探したKeyをString 変数に入れる
+			Set set 					= 		user.get(i).keySet();	//UserのIndexのKeyを呼び出す
+			Iterator iterator 		= 		set.iterator();	//
+			while(iterator.hasNext()){
+			  primaryKey = (String)iterator.next();	//呼び出したKeyをString 変数に入れる
 			}
 
 			primary 			= 		primaryKey.split("\\|");	//入れたKeyを”｜”で分ける
@@ -81,27 +88,32 @@ public class UserListController {
 		
 		/////////////////////////////////////////////////(     MAPからデータを格納     )/////////////////////////////////////////////////////////////
 			
-		for(int i = 0; i<user.size(); i++) {		
-			
-			if(numarr[i].equals(num) && num != null) {		//Num配列と要請したNumの値が同じの場合、要請したNumがある場合
-				search.add(user.get(i));							//あってる場合、宣言したsearch変数に格納する
-			}															
-			if(useridarr[i].equals(userid) && userid != null) {	//Userid配列と要請したUseridの値が同じの場合、要請したUseridがある場合
-				search.add(user.get(i));								//あってる場合、宣言したsearch変数に格納する
+			for(int i = 0; i<user.size(); i++) {		
+				System.out.println(phonearr[i]);
+				
+				if(numarr[i].equals(num) && num != null) {		//Num配列と要請したNumの値が同じの場合、要請したNumがある場合
+					System.out.println("num : 입력");
+					search.add(user.get(i));							//あってる場合、宣言したsearch変数に格納する
+				}															
+				if(useridarr[i].equals(userid) && userid != null) {	//Userid配列と要請したUseridの値が同じの場合、要請したUseridがある場合
+					search.add(user.get(i));								//あってる場合、宣言したsearch変数に格納する
+					System.out.println("userid : 입력");
+				}
+				if(stdnumarr[i].equals(stdnum) && stdnum != null) {	//Stdnum配列と要請したStdnumの値が同じの場合、要請したStdnumがある場合
+					search.add(user.get(i));										//あってる場合、宣言したsearch変数に格納する
+					System.out.println("stdnum : 입력");						
+				}
+				if(mynumarr[i].equals(mynum) && mynum != null) {		//Mynum配列と要請したMynumの値が同じの場合、要請したMynumがある場合
+					search.add(user.get(i));										//あってる場合、宣言したsearch変数に格納する
+					System.out.println("mynum : 입력");						
+				}
+				if(phonearr[i].equals(phone) && phone != null) {		//Phone配列と要請したPhoneの値が同じの場合、要請したPhoneがある場合
+					System.out.println("phone : 입력");						
+					search.add(user.get(i));									//あってる場合、宣言したsearch変数に格納する
+				}
 				
 			}
-			if(stdnumarr[i].equals(stdnum) && stdnum != null) {	//Stdnum配列と要請したStdnumの値が同じの場合、要請したStdnumがある場合
-				search.add(user.get(i));										//あってる場合、宣言したsearch変数に格納する					
-			}
-			if(mynumarr[i].equals(mynum) && mynum != null) {		//Mynum配列と要請したMynumの値が同じの場合、要請したMynumがある場合
-				search.add(user.get(i));										//あってる場合、宣言したsearch変数に格納する				
-			}
-			if(phonearr[i].equals(phone) && phone != null) {		//Phone配列と要請したPhoneの値が同じの場合、要請したPhoneがある場合			
-				search.add(user.get(i));									//あってる場合、宣言したsearch変数に格納する
-			}
-			
-		}
-			
+		
 		/////////////////////////////////////////////////( 重複チェック　）/////////////////////////////////////////////
 		for(HashMap<String, String[]> list : search) {
 			if(search2.contains(list) == false) {
@@ -109,51 +121,50 @@ public class UserListController {
 			}
 		}
 		/////////////////////////////////////////////////( 　　検索した値がないListを削除      )//////////////////////////////////////////////////
-		
 		Util util = new Util();	//UtilClassを使うために宣言
-		int ck;
 		if(num != null) {
 			for(int k = search2.size()-1; k>=0; k--) {//And結果になるVelueではない場合、後ろから削除
 																		//前からするとHashMapのIndexが変わるため
-				ck = util.check(search2.get(k), num);		//メソッドに入れてチェックする
-				if(ck != 1) {			//チェックが1の場合
+				int check = util.parsing(search2.get(k), num);		//メソッドに入れてチェックする
+				if(check != 1) {			//チェックが1の場合
 					search2.remove(k);	//Search2のKのIndexは削除する		
 				}																	
 			}
 		}
 		if(userid != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				ck = util.check(search2.get(k), userid);	//メソッドに入れてチェックする
-				if(ck != 2) {			//チェックが2の場合
+				int check = util.parsing(search2.get(k), userid);	//メソッドに入れてチェックする
+				if(check != 2) {			//チェックが2の場合
 					search2.remove(k);	//Search2のKのIndexは削除する
 				}																	
 			}
 		}
 		if(stdnum != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				ck = util.check(search2.get(k), stdnum);	//メソッドに入れてチェックする
-				if(ck != 3) {			//チェックが3の場合
+				int check = util.parsing(search2.get(k), stdnum);	//メソッドに入れてチェックする
+				if(check != 3) {			//チェックが3の場合
 					search2.remove(k);	//Search2のKのIndexは削除する
 				}
 			}
 		}
 		if(mynum != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				ck = util.check(search2.get(k), mynum);	//メソッドに入れてチェックする
-				if(ck != 4) {			//チェックが4の場合
+				int check = util.parsing(search2.get(k), mynum);	//メソッドに入れてチェックする
+				if(check != 4) {			//チェックが4の場合
 					search2.remove(k);	//Search2のKのIndexは削除する
 				}
 			}
 		}
 		if(phone != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				ck = util.check(search2.get(k), phone);	//メソッドに入れてチェックする
-				if(ck != 5) {			//チェックが5の場合
+				int check = util.parsing(search2.get(k), phone);	//メソッドに入れてチェックする
+				if(check != 5) {			//チェックが5の場合
 					search2.remove(k);	//Search2のKのIndexは削除する
 				}
 			}
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		//　検索欄に入力したデータ
 		model.addAttribute("num", num);			//検索欄に検索した値を入れる
 		model.addAttribute("userid", userid);		//検索欄に検索した値を入れる
@@ -164,6 +175,7 @@ public class UserListController {
 		return "search";
 	}
 
+	
 		//    																	 data insert page
 	@GetMapping("/insert") //http://localhost:8000/insertの場合
 	public String insert() {

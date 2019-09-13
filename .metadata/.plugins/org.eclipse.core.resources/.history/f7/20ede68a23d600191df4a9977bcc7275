@@ -67,9 +67,9 @@ public class Util {
 		String[] primary 		= 		null;		//String配列変数宣言
 		String primaryKey 	= 		null;		//MapのKeyの変数
 		Set set 					= 		search2.keySet();	//UserのKeyを呼び出す
-		Iterator iterator 		= 		set.iterator();			//IteratorのInterfaceで探す準備
-		while(iterator.hasNext()){							//順番で探す
-		  primaryKey 			= 		(String)iterator.next();		//探したKeyをString 変数に入れる
+		Iterator iterator 		= 		set.iterator();
+		while(iterator.hasNext()){
+		  primaryKey 			= 		(String)iterator.next();		//呼び出したKeyをString 変数に入れる
 		}
 		primary 					= 		primaryKey.split("\\|");		//入れたKeyを”｜”で分ける
 		if(param != null) {						//入ったパラメータのデータがある場合

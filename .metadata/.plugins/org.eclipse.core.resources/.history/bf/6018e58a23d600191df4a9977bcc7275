@@ -65,10 +65,10 @@ public class UserListController {
 		for(int i =0; i<user.size(); i++) {		//MapのKeyを取る
 			String[] primary 		= 		null;		//String配列変数宣言
 			String primaryKey 	= 		null;		//MapのKeyの変数
-			Set set 					= 		user.get(i).keySet();	//UserのIndexのKeyを呼び出す  SetにKeyのObjectが存在してる
-			Iterator iterator 		= 		set.iterator();	//IteratorのInterfaceで探す準備
-			while(iterator.hasNext()){					//順番で探す
-			  primaryKey = (String)iterator.next();	//探したKeyをString 変数に入れる
+			Set set 					= 		user.get(i).keySet();	//UserのIndexのKeyを呼び出す
+			Iterator iterator 		= 		set.iterator();	//
+			while(iterator.hasNext()){
+			  primaryKey = (String)iterator.next();	//呼び出したKeyをString 変数に入れる
 			}
 
 			primary 			= 		primaryKey.split("\\|");	//入れたKeyを”｜”で分ける
@@ -82,7 +82,7 @@ public class UserListController {
 		/////////////////////////////////////////////////(     MAPからデータを格納     )/////////////////////////////////////////////////////////////
 			
 		for(int i = 0; i<user.size(); i++) {		
-			
+			System.out.println(phonearr[i]);
 			if(numarr[i].equals(num) && num != null) {		//Num配列と要請したNumの値が同じの場合、要請したNumがある場合
 				search.add(user.get(i));							//あってる場合、宣言したsearch変数に格納する
 			}															

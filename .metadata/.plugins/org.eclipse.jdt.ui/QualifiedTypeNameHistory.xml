@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="com.cos.pratice.util.MyQuery"/>
 <fullyQualifiedTypeName name="com.cos.pratice.util.ProPertySource"/>
-<fullyQualifiedTypeName name="com.cos.pratice.util.Util"/>
 <fullyQualifiedTypeName name="com.cos.pratice.dao.UserDAO"/>
 <fullyQualifiedTypeName name="com.cos.pratice.domain.Users"/>
 <fullyQualifiedTypeName name="com.cos.pratice.domain.UsersPk"/>
@@ -24,4 +23,5 @@
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.cos.pratice.util.Util"/>
 </qualifiedTypeNameHistroy>

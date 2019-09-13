@@ -68,20 +68,13 @@ public class Util {
 		}
 		primary 					= 		primaryKey.split("\\|");
 		if(param != null) {
-			if(primary[0].equals(param)) {
+			if(primary[0].equals(param)		||
+					primary[1].equals(param)	||
+					primary[2].equals(param)	||
+					primary[3].equals(param)	||
+					primary[4].equals(param)
+			) {
 				return 1;
-			}
-			if(primary[1].equals(param)) {
-				return 2;
-			}
-			if(primary[2].equals(param)) {
-				return 3;
-			}
-			if(primary[3].equals(param)) {
-				return 4;
-			}
-			if(primary[4].equals(param)) {
-				return 5;
 			}
 		}
 		return 0;

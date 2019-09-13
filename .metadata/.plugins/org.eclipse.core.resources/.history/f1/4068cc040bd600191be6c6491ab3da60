@@ -11,11 +11,13 @@ import javax.persistence.TypedQuery;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Repository;
+
 import com.cos.pratice.domain.Users;
 import com.cos.pratice.domain.UsersPk;
 import com.cos.pratice.util.MyQuery;
 import com.cos.pratice.util.ProPertySource;
 import com.cos.pratice.util.Util;
+
 
 @Repository
 public class UserDAO{

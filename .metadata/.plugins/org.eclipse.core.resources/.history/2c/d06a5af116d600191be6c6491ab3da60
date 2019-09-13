@@ -49,10 +49,10 @@
                 </tr>    
             </thead>
             <tbody>
-            	<!-- 		Modelに格納したデータ（users） 		-->			
+            	<c:forEach var="map" items="${user}">	<!-- 		Modelに格納したデータ（users） 		-->			
             		<tr>
             			
-            			<c:forEach var = "item" items="${user}">
+            			<c:forEach var = "item" items="${map }">
             				<c:set var="pk" value="${item.key}"/>
 		            		<c:forEach items="${fn:split(pk,'|')}" var="items">
 		            			<!--Primary　Keyの項目5個  -->
@@ -73,6 +73,7 @@
                    		<!--項目10個  -->
                    		
                 	</tr>
+            	</c:forEach>
             </tbody>
         </table>
         <div class="downbutton">

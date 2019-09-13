@@ -17,6 +17,7 @@ import com.cos.pratice.util.MyQuery;
 import com.cos.pratice.util.ProPertySource;
 import com.cos.pratice.util.Util;
 
+
 @Repository
 public class UserDAO{
 	

@@ -77,7 +77,7 @@
                    		<c:forEach var="item" items="${map}">
                    			<c:set var="pk" value="${item.key}"/>
 	                   		<c:forEach items="${fn:split(pk,'|')}" var="items">
-								<td>${items}</td>
+								<td><a href="${item.key }">${items}</a></td>
 							</c:forEach>
 							
 								<!--項目2個追加表示  -->

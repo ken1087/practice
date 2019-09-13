@@ -230,10 +230,10 @@ public class UserListController {
 		for(int i = 0; i<users.size(); i++) {				//全てのデータ比較する
 			if(users.get(i).get(primarykey) != null) {	//Index番号と要請したPrimaryKeyとあってる場合
 				user = users.get(i);	//Userにいれる
-				break;	//データは一つだからいれると終了
+				break;
 			}
 		}
-		model.addAttribute("user", user);	//UserをJSPに渡す
+		model.addAttribute("user", user);
 		return "view";
 	}
 	

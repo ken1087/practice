@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,18 +71,19 @@
                 </tr>    
             </thead>
             <tbody>
-            	<c:forEach  var="item" items="${users}">	<!-- 		Modelに格納したデータ（users） 		-->			
+            	<c:forEach  var="map" items="${users}">	<!-- 		Modelに格納したデータ（users） 		-->			
             		<tr>
-            			<!--Primary　Keyの項目5個  -->
-                   		<td>${item.num}</td>
-                   		<td>${item.userid}</td>
-                   		<td>${item.stdnum}</td>
-                   		<td>${item.mynum}</td>
-                   		<td>${item.phone}</td>
-                   		
-                   		<!--項目2個追加表示  -->
-                   		<td>${item.country}</td>
-                   		<td>${item.gender}</td>
+                   		<!--Primary　Keyの項目5個  -->
+                   		<c:forEach var="item" items="${map}">
+                   			<c:set var="pk" value="${item.key}"/>
+	                   		<c:forEach items="${fn:split(pk,'|')}" var="items">
+								<td><a href="${item.key }">${items}</a></td>
+							</c:forEach>
+							
+								<!--項目2個追加表示  -->
+								<td>${item.value[6]}</td>
+								<td>${item.value[7]}</td>
+						</c:forEach>
                 	</tr>
             	</c:forEach>
             </tbody>

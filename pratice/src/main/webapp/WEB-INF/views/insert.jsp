@@ -112,11 +112,11 @@
                     },
                     type: 'POST',
                     data: JSON.stringify({
-                        'num' : num,
-                        'userid' : userid,
-                        'stdnum' : stdnum,
-                        'mynum' : mynum,
-                        'phone' : phone
+                        'num' 		: 		num,
+                        'userid' 		: 		userid,
+                        'stdnum' 	: 		stdnum,
+                        'mynum' 	: 		mynum,
+                        'phone' 		: 		phone
                     }),
                     success: function (obj) {
                         if(1 == obj){

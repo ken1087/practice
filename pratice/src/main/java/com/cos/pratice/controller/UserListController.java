@@ -2,7 +2,10 @@ package com.cos.pratice.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cos.pratice.dao.UserDAO;
 import com.cos.pratice.domain.Users;
 import com.cos.pratice.domain.UsersPk;
+import com.cos.pratice.util.Util;
 
 
 
@@ -28,9 +32,11 @@ public class UserListController {
 	//User select*
 	@GetMapping("/homework") //http://localhost:8000/homeworkの場合
 	public String home(Model model){
-		List<HashMap<String,Object>> user = new ArrayList<HashMap<String,Object>>();
-	
+		List<HashMap<String,String[]>> user = new ArrayList<HashMap<String,String[]>>();
+		
 		user = userDAO.findAllList();
+		
+		
 		
 		model.addAttribute("users", user);	// List UsersをJspFileに渡すためにmodelに格納する
 		return "homework";	 	//　homework.jspにreturnする
@@ -38,78 +44,130 @@ public class UserListController {
 	}
 	
 	
-	
-	//검색기능
+
 	@GetMapping("/search")	// http://localhost:8000/searchの場合、
-	public String search(Model model, Integer num,String userid,Integer stdnum,Integer mynum,Integer phone){	//5個のPrimary Keyのデータを要請
+	public String search(Model model, String num,String userid,String stdnum,String mynum,String phone){	//5個のPrimary Keyのデータを要請
 		
-		List<HashMap<String, Object>> user = new ArrayList<HashMap<String,Object>>();
-		List<HashMap<String,Object>> search = new ArrayList<HashMap<String,Object>>();
-		List<HashMap<String,Object>> search2 = new ArrayList<HashMap<String,Object>>();	//HashMap 宣言
+		List<HashMap<String, String[]>> user 		= new ArrayList<HashMap<String,String[]>>();
+		List<HashMap<String,String[]>> search 	= new ArrayList<HashMap<String,String[]>>();
+		List<HashMap<String,String[]>> search2 	= new ArrayList<HashMap<String,String[]>>();	//HashMap 宣言
 		user = userDAO.findAllList();	//userのデータを呼び出す
 		
-		if(userid.equals("")) {userid = null;}//useridが””の場合、Nullにする。
+		if(num.equals("")) 		{num = null;}//useridが””の場合、Nullにする。
+		if(userid.equals("")) 	{userid = null;}
+		if(stdnum.equals("")) 	{stdnum = null;}
+		if(mynum.equals("")) 	{mynum = null;}
+		if(phone.equals("")) 	{phone = null;}
 		
+		System.out.println(tag+"Num : "+num);
+		System.out.println(tag+"Userid : "+userid);
+		System.out.println(tag+"stdnum : "+stdnum);
+		System.out.println(tag+"mynum : "+mynum);
+		System.out.println(tag+"phone : "+phone);
+		
+		String[] numarr 		= 		new String[user.size()];
+		String[] useridarr 	= 		new String[user.size()];
+		String[] stdnumarr 	= 		new String[user.size()];
+		String[] mynumarr 	= 		new String[user.size()];
+		String[] phonearr  	= 		new String[user.size()];
+		
+		for(int i =0; i<user.size(); i++) {
+			String[] primary 		= 		null;
+			String primaryKey 	= 		null;
+			Set set 					= 		user.get(i).keySet();
+			Iterator iterator 		= 		set.iterator();
+			while(iterator.hasNext()){
+			  primaryKey = (String)iterator.next();
+			}
+			
+			primary 			= 		primaryKey.split("\\|");
+			numarr[i] 		=		primary[0];
+			useridarr[i] 	= 		primary[1];
+			stdnumarr[i] 	= 		primary[2];
+			mynumarr[i] 	= 		primary[3];
+			phonearr[i] 	= 		primary[4];
+		}
 		
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		if(num != null || userid != null || stdnum != null|| mynum != null|| phone != null) {	//データ値がある場合、
-			for(int i = 0; i<user.size(); i++) {							
-				if(user.get(i).get("|").equals(num)) {
+			
+			for(int i = 0; i<user.size(); i++) {		
+				System.out.println(phonearr[i]);
+				
+				if(numarr[i].equals(num) && num != null) {
+					System.out.println("num : 입력");
 					search.add(user.get(i));						//呼び出したuserのKeyと要請したValueを比較
 				}															//あってる場合、宣言したsearch変数に格納する
-				if(user.get(i).get("|").equals(userid)) {
+				if(useridarr[i].equals(userid) && userid != null) {
 					search.add(user.get(i));
+					System.out.println("userid : 입력");
 				}
-				if(user.get(i).get("|").equals(stdnum)) {
+				if(stdnumarr[i].equals(stdnum) && stdnum != null) {
 					search.add(user.get(i));
+					System.out.println("stdnum : 입력");
 				}
-				if(user.get(i).get("|").equals(mynum)) {
+				if(mynumarr[i].equals(mynum) && mynum != null) {
 					search.add(user.get(i));
+					System.out.println("mynum : 입력");
 				}
-				if(user.get(i).get("|").equals(phone)) {
+				if(phonearr[i].equals(phone) && phone != null) {
+					System.out.println("phone : 입력");
 					search.add(user.get(i));
 				}
 				
 			}
-		}
+		
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		for(HashMap<String, Object> list : search) {
+		for(HashMap<String, String[]> list : search) {
 			if(search2.contains(list) == false) {
 				search2.add(list);											//全部格納したListを重複検査後、Search2に格納する
+				
 			}
 		}
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+
 		if(num != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				if(!search2.get(k).get("|").equals(num)) {
+				Util util = new Util();
+				int check = util.parsing(search2.get(k), num);
+				if(check == 0) {
 					search2.remove(k);										//And結果になるためにVelueではない場合、後ろから削除
 				}																	//前からするとHashMapのIndexが変わるため
 			}
 		}
 		if(userid != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				if(!search2.get(k).get("|").equals(userid)) {
+				Util util = new Util();
+				int check = util.parsing(search2.get(k), userid);
+				if(check == 0) {
 					search2.remove(k);
 				}																	
 			}
 		}
 		if(stdnum != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				if(!search2.get(k).get("|").equals(stdnum)) {
+				Util util = new Util();
+				int check = util.parsing(search2.get(k), stdnum);
+				if(check == 0) {
 					search2.remove(k);
 				}
 			}
 		}
 		if(mynum != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				if(!search2.get(k).get("|").equals(mynum)) {
+				Util util = new Util();
+				int check = util.parsing(search2.get(k), mynum);
+				if(check == 0) {
 					search2.remove(k);
 				}
 			}
 		}
 		if(phone != null) {
 			for(int k = search2.size()-1; k>=0; k--) {
-				if(!search2.get(k).get("|").equals(phone)) {
+				Util util = new Util();
+				int check = util.parsing(search2.get(k), phone);
+				if(check == 0) {
+					System.out.println(search2.get(k));
 					search2.remove(k);
 				}
 			}
@@ -122,7 +180,6 @@ public class UserListController {
 		model.addAttribute("stdnum", stdnum);
 		model.addAttribute("mynum", mynum);
 		model.addAttribute("phone", phone);
-			
 		model.addAttribute("search", search2);	//全ての検査が終わったらModelに格納してJsp fileに渡す
 		return "search";
 	}
@@ -139,31 +196,25 @@ public class UserListController {
 	 public String datainsert(Users user, UsersPk userspk) {
 		 
 		 userDAO.sava(user, userspk);	//入力した内容をinsertする
-		
-	 
 		 return "redirect:homework"; //入力するとhttp://localhost:8000/homeworkに戻る
 	 
 	 }
  																				//data 重複チェック
 	@PostMapping("/checkid")
 	public @ResponseBody int checkid(@RequestBody UsersPk userpk) {
-		List<HashMap<String, Object>> user = new ArrayList<HashMap<String,Object>>();
+		List<HashMap<String, String[]>> user = new ArrayList<HashMap<String,String[]>>();
 		
 		user = userDAO.findAllList();	//要請したUserPrimaryKeyと比較するために呼び出し
 	
 		int check = 1;
-		
-		
+		String insert	=		userpk.getNum()		+"|"+
+									userpk.getUserid()	+"|"+
+									userpk.getStdnum()	+"|"+
+									userpk.getMynum()	+"|"+
+									userpk.getPhone();
 		if(user.size() != 0) {
-			
 			for(int i =0; i<user.size(); i++) {
-				
-				
-				if( user.get(i).get("num").equals(userpk.getNum())&&
-					user.get(i).get("userid").equals(userpk.getUserid())&&
-					user.get(i).get("stdnum").equals(userpk.getStdnum())&&
-					user.get(i).get("mynum").equals(userpk.getMynum())&&
-					user.get(i).get("phone").equals(userpk.getPhone())) {
+				if( user.get(i).get(insert) != null){
 					//　5個の値が全部同じの場合、
 					check = 0;		//Checkは０
 					break;
@@ -176,29 +227,19 @@ public class UserListController {
 	}
 	
 	
-	@GetMapping("/view/{num}/{userid}/{stdnum}/{mynum}/{phone}")
-	public String view(Model model ,@PathVariable int num, 
-			@PathVariable String userid, 
-			@PathVariable int stdnum, 
-			@PathVariable int mynum, 
-			@PathVariable int phone) {
+	@GetMapping("/view/{primarykey}")
+	public String view(Model model ,@PathVariable String primarykey) {
 		
-		List<HashMap<String, Object>> user = new ArrayList<HashMap<String,Object>>();
-		List<HashMap<String, Object>> users = new ArrayList<HashMap<String,Object>>();
+		List<HashMap<String, String[]>> user = new ArrayList<HashMap<String,String[]>>();
+		List<HashMap<String, String[]>> users = new ArrayList<HashMap<String,String[]>>();
 		users = userDAO.findAllList();
 		
 		for(int i = 0; i<users.size(); i++) {
-			if(users.get(i).get("num").equals(num)&&
-				users.get(i).get("userid").equals(userid)&&
-				users.get(i).get("stdnum").equals(stdnum)&&
-				users.get(i).get("mynum").equals(mynum)&&
-				users.get(i).get("phone").equals(phone)
-			) {
+			if(users.get(i).get(primarykey) != null) {
 				user.add(users.get(i));
 				break;
 			}
 		}
-		
 		model.addAttribute("user", user);
 		return "view";
 	}

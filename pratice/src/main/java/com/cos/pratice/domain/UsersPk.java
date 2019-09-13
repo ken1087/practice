@@ -15,7 +15,7 @@ public class UsersPk implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	@Column( name = "num",nullable=false, length=10)
+	@Column( name = "num",	nullable=false, length=10)
 	private int num;
 	@Column( name = "userid",nullable=false, length=10)
 	private String userid;

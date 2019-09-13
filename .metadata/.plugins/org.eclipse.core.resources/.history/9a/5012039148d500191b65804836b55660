@@ -1,0 +1,56 @@
+package com.cos.pratice.util;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+
+import com.cos.pratice.domain.Users;
+
+
+public class Util {
+		
+	
+	public List<HashMap<String,Object>> hash(List<Users> users){
+		
+		
+		
+		
+		List<HashMap<String,Object>> user = new ArrayList<HashMap<String,Object>>();
+		
+		for(int i = 0; i<users.size(); i++) {
+			LinkedHashMap<String, Object> map = new LinkedHashMap<>();
+			String num = users.get(0).getUserpk().getNum()+"";
+			String userid = users.get(0).getUserpk().getUserid();
+			String stdnum = users.get(0).getUserpk().getStdnum()+"";
+			String mynum = users.get(0).getUserpk().getMynum()+"";
+			String phone = users.get(0).getUserpk().getPhone()+"";
+			String name = users.get(0).getName();
+			String password = users.get(0).getPassword();
+			String addr = users.get(0).getAddr();
+			String email = users.get(0).getEmail();
+			String title = users.get(0).getTitle();
+			String content = users.get(0).getContent();
+			String country = users.get(0).getCountry(); 
+			String gender = users.get(0).getGender();
+			String createDate = users.get(0).getCreateDate()+"";
+			String updateDate = users.get(0).getUpdateDate()+"";
+		
+			String[] arr = {num,userid,stdnum,mynum,phone,name,password,addr,email,title, content, country,gender,createDate,updateDate};
+			
+			
+			map.put("primarykey", users.get(i).getUserpk().getNum()+"|"+
+											users.get(i).getUserpk().getUserid()+"|"+
+											users.get(i).getUserpk().getStdnum()+"|"+
+											users.get(i).getUserpk().getMynum()+"|"+
+											users.get(i).getUserpk().getPhone()
+			);
+			
+			
+			map.put("key", arr);
+				
+			user.add(map);	//Key , Value 値で格納
+		}
+		return user;	
+	}
+}

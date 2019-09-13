@@ -10,12 +10,12 @@ public class MyQuery {
 		return selectall;
 	}
 	public void setSelectall(String selectall) {
-		this.selectall = selectall;
+		this.selectall 	= 		selectall;
 	}
 	public String getDbsave() {
 		return dbsave;
 	}
 	public void setDbsave(String dbsave) {
-		this.dbsave = dbsave;
+		this.dbsave 	= 		dbsave;
 	}
 }

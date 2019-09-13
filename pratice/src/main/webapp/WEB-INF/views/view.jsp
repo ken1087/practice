@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,25 +49,29 @@
                 </tr>    
             </thead>
             <tbody>
-            	<c:forEach var="item" items="${user}">	<!-- 		Modelに格納したデータ（users） 		-->			
+            	<c:forEach var="map" items="${user}">	<!-- 		Modelに格納したデータ（users） 		-->			
             		<tr>
-            			<!--Primary　Keyの項目5個  -->
-                   		<td>${item.num}</td>
-                   		<td>${item.userid}</td>
-                   		<td>${item.stdnum}</td>
-                   		<td>${item.mynum}</td>
-                   		<td>${item.phone}</td>
+            			
+            			<c:forEach var = "item" items="${map }">
+            				<c:set var="pk" value="${item.key}"/>
+		            		<c:forEach items="${fn:split(pk,'|')}" var="items">
+		            			<!--Primary　Keyの項目5個  -->
+		                   		<td>${items}</td>
+		            		</c:forEach>
+            				<td>${item.value[0]}</td>
+	                   		<td>${item.value[1]}</td>
+	                   		<td>${item.value[2]}</td>
+	                   		<td>${item.value[3]}</td>
+	                   		<td>${item.value[4]}</td>
+	                   		<td>${item.value[5]}</td>
+	                   		<td>${item.value[6]}</td>
+	                   		<td>${item.value[7]}</td>
+	                   		<td>${item.value[8]}</td>
+	                   		<td>${item.value[9]}</td>
+            			</c:forEach>
+                   		
                    		<!--項目10個  -->
-                   		<td>${item.name}</td>
-                   		<td>${item.password}</td>
-                   		<td>${item.addr}</td>
-                   		<td>${item.email}</td>
-                   		<td>${item.title}</td>
-                   		<td>${item.content}</td>
-                   		<td>${item.country}</td>
-                   		<td>${item.gender}</td>
-                   		<td>${item.createDate}</td>
-                   		<td>${item.updateDate}</td>
+                   		
                 	</tr>
             	</c:forEach>
             </tbody>

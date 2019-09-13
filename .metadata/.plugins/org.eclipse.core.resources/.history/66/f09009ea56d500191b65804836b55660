@@ -1,0 +1,61 @@
+package com.cos.pratice.util;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+
+import com.cos.pratice.domain.Users;
+
+
+public class Util {
+		
+	
+	public List<HashMap<String,Object>> hash(List<Users> users){
+		
+		
+		
+		
+		List<HashMap<String,Object>> user = new ArrayList<HashMap<String,Object>>();
+		
+		for(int i = 0; i<users.size(); i++) {
+			LinkedHashMap<String, Object> map = new LinkedHashMap<>();
+			String primary = users.get(i).getUserpk().getNum()+"|"+
+				users.get(i).getUserpk().getUserid()+"|"+
+				users.get(i).getUserpk().getStdnum()+"|"+
+				users.get(i).getUserpk().getMynum()+"|"+
+				users.get(i).getUserpk().getPhone();
+			
+			String name = users.get(i).getName();
+			String password = users.get(i).getPassword();
+			String addr = users.get(i).getAddr();
+			String email = users.get(i).getEmail();
+			String title = users.get(i).getTitle();
+			String content = users.get(i).getContent();
+			String country = users.get(i).getCountry(); 
+			String gender = users.get(i).getGender();
+			String createDate = users.get(i).getCreateDate()+"";
+			String updateDate = users.get(i).getUpdateDate()+"";
+		
+			
+			
+			
+			map.put("primarykey", primary);
+			map.put(primary, Arrays.toString(new String[]{name,password,addr,email,title, content, country,gender,createDate,updateDate}));
+			map.put(primary, map.getOrDefault(primary, ""));
+			user.add(map);	//Key , Value 値で格納
+			
+		}
+		String values = user.get(0).get("12|ken1087|130212|1861626|99209495").toString();
+		String[] value1 = values.split("\\[");
+		System.out.println(value1[1]);
+		String[] value2 = value1[1].split("\\]");
+		System.out.println(value2[0]);
+		
+		
+		
+		System.out.println(user.get(0).get("primarykey"));
+		return user;	
+	}
+}

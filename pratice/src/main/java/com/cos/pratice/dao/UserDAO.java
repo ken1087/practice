@@ -22,17 +22,14 @@ import com.cos.pratice.util.Util;
 @Repository
 public class UserDAO{
 	
-
 	public void sava(Users user, UsersPk userpk){
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");	//META-INFにあるPersistence.xml読み込む
 		EntityManager em = emf.createEntityManager();	//EntityManager　宣言
 		EntityTransaction tx = em.getTransaction();	//Transaction　宣言
 
 		tx.begin();
-		
 		try {
-		
-			Users u = new Users();									//User　Object生成
+			Users u = new Users();								 //User　Object生成
 			u.setUserpk(userpk);
 			u.setName(user.getName());
 			u.setPassword(user.getPassword());
@@ -57,16 +54,16 @@ public class UserDAO{
 	}
 
 	//																				Find 	All
-	public List<HashMap<String, Object>> findAllList(){
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
-		EntityManager em = emf.createEntityManager();
+	public List<HashMap<String, String[]>> findAllList(){
+		EntityManagerFactory emf   = Persistence.createEntityManagerFactory("hello");
+		EntityManager em 			  = emf.createEntityManager();
 	
 		ApplicationContext context = new AnnotationConfigApplicationContext(ProPertySource.class);	//SQL文があるPropertiesファイルを読み込んでるClassを呼び出す
 		MyQuery qry = context.getBean("myquery", MyQuery.class);	//SQL文を保存してるObjectを呼び出す
 		String jpql = qry.getSelectall();	//MyQueryに	Select u FROM Users uが書いてる変数を呼び出してStringに格納
 		
 		try {
-			List<HashMap<String, Object>> hashlist = new ArrayList<HashMap<String,Object>>();
+			List<HashMap<String, String[]>> hashlist = new ArrayList<HashMap<String,String[]>>();
 			TypedQuery<Users> query =  em.createQuery(jpql, Users.class);	//createQueryにSQL文とUsersObjectを入れる
 				List<Users> list = (List<Users>)query.getResultList();	//入れるとSQL文が実行、getResultList() <-　実行したSQL文のList
 				Util util = new Util();

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,21 +95,24 @@
                 </tr>    
             </thead>
             <tbody>
-            	<c:forEach  var="item" items="${search}">	<!-- 		Modelに格納したデータ（users） 		-->			
+            	<c:forEach  var="map" items="${search}">	<!-- 		Modelに格納したデータ（users） 		-->			
             		<tr>
-            			<!--Primary　Keyの項目5個  -->
-                   		<td><a href="/view/${item.num}/${item.userid}/${item.stdnum}/${item.mynum}/${item.phone}">${item.num}</a></td>
-                   		<td><a href="/view/${item.num}/${item.userid}/${item.stdnum}/${item.mynum}/${item.phone}">${item.userid}</a></td>
-                   		<td><a href="/view/${item.num}/${item.userid}/${item.stdnum}/${item.mynum}/${item.phone}">${item.stdnum}</a></td>
-                   		<td><a href="/view/${item.num}/${item.userid}/${item.stdnum}/${item.mynum}/${item.phone}">${item.mynum}</a></td>
-                   		<td><a href="/view/${item.num}/${item.userid}/${item.stdnum}/${item.mynum}/${item.phone}">${item.phone}</a></td>
-                   		
+            		
+            			<c:forEach items="${map}" var="item">
+            				<c:set var="pk" value="${item.key}"/>
+		            		<c:forEach items="${fn:split(pk,'|')}" var="items">
+		            			<!--Primary　Keyの項目5個  -->
+		                   		<td><a href="/view/${item.key}">${items}</a></td>
+		            		</c:forEach>
+		            			<td>${item.value[0]}</td>
+		        				<td>${item.value[4]}</td>
+		        				<td>${item.value[5]}</td>
+		                   		<td>${item.value[6]}</td>
+		                   		<td>${item.value[7]}</td>
+            			</c:forEach>
+	            		
                    		<!--項目5個追加表示  -->
-                   		<td>${item.name}</td>
-        				<td>${item.title}</td>
-        				<td>${item.content}</td>
-                   		<td>${item.country}</td>
-                   		<td>${item.gender}</td>
+                   		
                 	</tr>
             	</c:forEach>
             </tbody>

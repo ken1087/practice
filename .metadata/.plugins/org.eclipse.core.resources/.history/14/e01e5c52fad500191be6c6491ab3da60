@@ -1,0 +1,24 @@
+package com.cos.pratice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PraticeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PraticeApplication.class, args);
+		
+		
+		String arr[5];
+		String[] arr2 = {"dd","ddd","asd","saas","dsadaasd"};
+	
+		for(int i =0; i<5; i++) {
+			arr[i] = arr2[0];
+			
+		}
+		
+		
+	}
+
+}

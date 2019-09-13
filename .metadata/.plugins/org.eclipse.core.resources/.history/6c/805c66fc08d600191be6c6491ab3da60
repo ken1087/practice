@@ -25,7 +25,7 @@ public class Util {
 				users.get(i).getUserpk().getStdnum()						+"|"+
 				users.get(i).getUserpk().getMynum()						+"|"+
 				users.get(i).getUserpk().getPhone();
-
+			
 			String name 			= 		users.get(i).getName();
 			String password 		= 		users.get(i).getPassword();
 			String addr				= 		users.get(i).getAddr();
@@ -36,21 +36,20 @@ public class Util {
 			String gender 			= 		users.get(i).getGender();
 			String createDate 	= 		users.get(i).getCreateDate()		+"";
 			String updateDate 	= 		users.get(i).getUpdateDate()	+"";
+			String[] arr 			= {name,password,addr,email,title, content, country,gender,createDate,updateDate};
 			
-			if(name == null) 		{name = "";}
-			if(password == null) 	{password = "";}
-			if(addr == null) 			{addr = "";}
-			if(email == null) 		{email = "";}
-			if(title == null) 			{title = "";}
-			if(content == null) 		{content = "";}
-			if(country == null) 		{country = "";}
-			if(gender == null) 		{gender = "";}
-			if(createDate == null) {createDate = "";}
-			if(updateDate == null){updateDate = "";}
-			
-			String[] arr 	= 		{name,password,addr,email,title, content, country,gender,createDate,updateDate};
 			map.put(primary, arr);
+			
 			user.add(map);	//Key , Value 値で格納
+			
+			
+			
+			Set set 				= 		user.get(i).keySet();
+			Iterator iterator 	= 		set.iterator();
+			while(iterator.hasNext()){
+			  String key 		= (String)iterator.next();
+			  System.out.println("hashMap Key : " + key);
+			}	
 		}
 		
 		return user;	

@@ -48,9 +48,25 @@ public class Util {
 			if(createDate == null) {createDate = "";}
 			if(updateDate == null){updateDate = "";}
 			
-			String[] arr 	= 		{name,password,addr,email,title, content, country,gender,createDate,updateDate};
+			
+			
+			
+			
+			
+			String[] arr 			= {name,password,addr,email,title, content, country,gender,createDate,updateDate};
+			
 			map.put(primary, arr);
+			
 			user.add(map);	//Key , Value 値で格納
+			
+			
+			
+			Set set 				= 		user.get(i).keySet();
+			Iterator iterator 	= 		set.iterator();
+			while(iterator.hasNext()){
+			  String key 		= (String)iterator.next();
+			  System.out.println("hashMap Key : " + key);
+			}	
 		}
 		
 		return user;	

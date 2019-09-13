@@ -134,7 +134,7 @@ public class UserListController {
 			if(userid != null) {
 				int check = util.parsing(search2.get(k), userid);
 				if(check == 0) {
-					search2.remove(k);
+					search2.remove(k);										
 				}		
 			}
 			if(stdnum != null) {
@@ -156,6 +156,27 @@ public class UserListController {
 				}		
 			}
 		}
+		
+		
+		
+		
+
+		/*
+		 * if(num != null) { for(int k = search2.size()-1; k>=0; k--) { Util util = new
+		 * Util(); int check = util.parsing(search2.get(k), num); if(check == 0) {
+		 * search2.remove(k); //And結果になるためにVelueではない場合、後ろから削除 }
+		 * //前からするとHashMapのIndexが変わるため } } if(userid != null) { for(int k =
+		 * search2.size()-1; k>=0; k--) { Util util = new Util(); int check =
+		 * util.parsing(search2.get(k), userid); if(check == 0) { search2.remove(k); } }
+		 * } if(stdnum != null) { for(int k = search2.size()-1; k>=0; k--) { Util util =
+		 * new Util(); int check = util.parsing(search2.get(k), stdnum); if(check == 0)
+		 * { search2.remove(k); } } } if(mynum != null) { for(int k = search2.size()-1;
+		 * k>=0; k--) { Util util = new Util(); int check = util.parsing(search2.get(k),
+		 * mynum); if(check == 0) { search2.remove(k); } } } if(phone != null) { for(int
+		 * k = search2.size()-1; k>=0; k--) { Util util = new Util(); int check =
+		 * util.parsing(search2.get(k), phone); if(check == 0) {
+		 * System.out.println(search2.get(k)); search2.remove(k); } } }
+		 */
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		//　検索欄に入力したデータ

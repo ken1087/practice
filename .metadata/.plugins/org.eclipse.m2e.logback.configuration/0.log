@@ -2273,3 +2273,117 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-09-24 07:41:26,957 [Worker-4: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2019-09-24 07:41:26,960 [Worker-4: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-09-24 07:41:26,960 [Worker-4: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 09:25:38,347 [Worker-30: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 09:25:38,349 [Worker-30: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 09:25:38,353 [Worker-30: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 09:25:38,356 [Worker-30: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 09:25:38,356 [Worker-30: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 09:27:08,727 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 09:27:08,730 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 09:27:08,733 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 09:27:08,737 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 09:27:08,737 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 09:36:01,716 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cos:pratice:0.0.1-SNAPSHOT @ C:\Users\1\Desktop\kang\project\pratice\pratice\pom.xml.
+2019-09-24 09:36:02,908 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 09:36:02,914 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 09:36:02,930 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 09:36:02,933 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 09:36:02,933 [Worker-6: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 09:36:05,953 [Worker-36: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 09:36:05,955 [Worker-36: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 09:36:05,958 [Worker-36: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 09:36:05,971 [Worker-36: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 09:36:05,971 [Worker-36: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 20:50:35,979 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 20:50:35,982 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 20:50:35,985 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 20:50:35,988 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 20:50:35,988 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:01:49,026 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:01:49,028 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:01:49,031 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:01:49,034 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:01:49,034 [Worker-61: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:03:38,079 [Worker-68: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:03:38,081 [Worker-68: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:03:38,085 [Worker-68: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:03:38,088 [Worker-68: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:03:38,088 [Worker-68: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:08:05,634 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:08:05,637 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:08:05,640 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:08:05,643 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:08:05,643 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:08:13,896 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:08:13,898 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:08:13,901 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:08:13,904 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:08:13,904 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:08:29,233 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:08:29,236 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:08:29,239 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:08:29,241 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:08:29,242 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:08:40,320 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:08:40,322 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:08:40,326 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:08:40,328 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:08:40,329 [Worker-26: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:10:54,722 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:10:54,724 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:10:54,727 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:10:54,732 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:10:54,732 [Worker-66: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:17:44,209 [Worker-73: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:17:44,211 [Worker-73: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:17:44,214 [Worker-73: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:17:44,216 [Worker-73: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:17:44,217 [Worker-73: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:18:06,349 [Worker-69: pratice - PraticeApplication ªÎÑÃÔÑ] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:18:06,352 [Worker-69: pratice - PraticeApplication ªÎÑÃÔÑ] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:18:06,355 [Worker-69: pratice - PraticeApplication ªÎÑÃÔÑ] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:18:06,357 [Worker-69: pratice - PraticeApplication ªÎÑÃÔÑ] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:18:06,357 [Worker-69: pratice - PraticeApplication ªÎÑÃÔÑ] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:19:14,020 [Worker-75: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:19:14,022 [Worker-75: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:19:14,025 [Worker-75: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:19:14,027 [Worker-75: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:19:14,028 [Worker-75: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:23:29,100 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:23:29,102 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:23:29,105 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:23:29,107 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:23:29,108 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:23:34,356 [Worker-69: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:23:34,358 [Worker-69: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:23:34,361 [Worker-69: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:23:34,363 [Worker-69: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:23:34,363 [Worker-69: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 21:25:21,521 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:25:21,524 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 21:25:21,526 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 21:25:21,529 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 21:25:21,529 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 22:41:19,460 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 22:41:19,463 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 22:41:19,466 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 22:41:19,469 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 22:41:19,469 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 22:41:40,442 [Worker-79: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 22:41:40,444 [Worker-79: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 22:41:40,447 [Worker-79: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 22:41:40,449 [Worker-79: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 22:41:40,450 [Worker-79: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 22:42:54,900 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 22:42:54,902 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 22:42:54,905 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 22:42:54,908 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 22:42:54,908 [Worker-83: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 22:44:27,224 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 22:44:27,226 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 22:44:27,229 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2019-09-24 22:44:27,232 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 22:44:27,232 [Worker-74: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1\Desktop\kang\project\pratice\pratice\src\test\resources
+2019-09-24 23:04:08,496 [Worker-87: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-24 23:04:08,498 [Worker-87: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-24 23:04:08,501 [Worker-87: «ï?«¯«¹«Ú?«¹ªò«Ó«ë«Éñé] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources

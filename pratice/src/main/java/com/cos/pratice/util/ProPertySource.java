@@ -11,14 +11,14 @@ import org.springframework.core.env.Environment;
 @PropertySource(value = {"classpath:static/properties/db.properties"})    //propertiesファイルがあるパス
 public class ProPertySource{
 	
-	@Autowired
-	Environment env;    //propertiesファイルを読み込む
-
-	@Bean
-	public MyQuery myquery() {
-		MyQuery qry = new MyQuery();
-		qry.setSelectall(env.getProperty("selectall"));    //MyQueryObjectに保存
-		return qry;
+    @Autowired
+    Environment env;    //propertiesファイルを読み込む
+	
+    @Bean
+    public MyQuery myquery() {
+	    MyQuery qry = new MyQuery();
+	    qry.setSelectall(env.getProperty("selectall"));    //MyQueryObjectに保存
+	    return qry;
 	}
 	
 }

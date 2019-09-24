@@ -70,10 +70,10 @@
                 </script>
             </div>
          	<div>
-                <a href="/insert">data insert</a>	<!-- 15項目のデータを入力するページ移動  -->
+                <a href="/insert">data insert</a>    <!-- 15項目のデータを入力するページ移動  -->
             </div>
             <div class="">
-                <a href="/homework">再度読み込み</a>	<!--http://localhost:8000/homework -->
+                <a href="/homework">再度読み込み</a>    <!--http://localhost:8000/homework -->
             </div>
         </form>    
         <table class="table">
@@ -95,23 +95,25 @@
                 </tr>    
             </thead>
             <tbody>
-            	<c:forEach  var="map" items="${search}">	<!-- 		Modelに格納したデータ（users） 		-->			
+            	<c:forEach  var="map" items="${search}">    <!-- 		Modelに格納したデータ（users） 		-->			
             		<tr>
             		
             			<c:forEach items="${map}" var="item">
-            				<c:set var="pk" value="${item.key}"/>
-		            		<c:forEach items="${fn:split(pk,'|')}" var="items">
+            				<c:set var="pk" value="${item.key}"/>    <!-- 格納したデータのKeyをpk変数にいれる -->
+		            		<c:forEach items="${fn:split(pk,'|')}" var="items">    <!-- pk変数にあるprimarykeyを'|'で分ける　-->
 		            			<!--Primary　Keyの項目5個  -->
-		                   		<td><a href="/view/${item.key}">${items}</a></td>
+		                   		<td><a href="/view/${item.key}">${items}</a></td>    <!-- 分けたKeyを順番で書く-->
 		            		</c:forEach>
-		            			<td>${item.value[0]}</td>
-		        				<td>${item.value[4]}</td>
-		        				<td>${item.value[5]}</td>
-		                   		<td>${item.value[6]}</td>
-		                   		<td>${item.value[7]}</td>
+		            		
+		            			<!--項目5個追加表示  -->
+		            			<td>${item.value[0]}</td>    <!--　KeyのValueのIndex -->
+		        				<td>${item.value[4]}</td>    <!--　KeyのValueのIndex -->
+		        				<td>${item.value[5]}</td>    <!--　KeyのValueのIndex -->
+		                   		<td>${item.value[6]}</td>    <!--　KeyのValueのIndex -->
+		                   		<td>${item.value[7]}</td>    <!--　KeyのValueのIndex -->
             			</c:forEach>
 	            		
-                   		<!--項目5個追加表示  -->
+                   		
                    		
                 	</tr>
             	</c:forEach>

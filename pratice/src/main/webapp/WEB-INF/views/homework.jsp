@@ -52,7 +52,7 @@
             </div>
             </div>
           	<div class="">
-                <a href="/insert">date insert</a>	<!-- データ入力するページ移動  -->
+                <a href="/insert">date insert</a>    <!-- データ入力するページ移動  -->
             </div> 
         </form>    
         <table class="table">
@@ -71,18 +71,18 @@
                 </tr>    
             </thead>
             <tbody>
-            	<c:forEach  var="map" items="${users}">	<!-- 		Modelに格納したデータ（users） 		-->			
+            	<c:forEach  var="map" items="${users}">    <!-- 		Modelに格納したデータ（users） 		-->			
             		<tr>
                    		<!--Primary　Keyの項目5個  -->
                    		<c:forEach var="item" items="${map}">
-                   			<c:set var="pk" value="${item.key}"/>
-	                   		<c:forEach items="${fn:split(pk,'|')}" var="items">
-								<td>${items}</td>
+                   			<c:set var="pk" value="${item.key}"/>    <!-- 格納したデータのKeyをpk変数にいれる -->
+	                   		<c:forEach items="${fn:split(pk,'|')}" var="items">    <!-- pk変数にあるprimarykeyを'|'で分ける　-->
+								<td>${items}</td>    <!-- 分けたKeyを順番で書く -->
 							</c:forEach>
 							
 								<!--項目2個追加表示  -->
-								<td>${item.value[6]}</td>
-								<td>${item.value[7]}</td>
+								<td>${item.value[6]}</td>    <!--　KeyのValueのIndex -->
+								<td>${item.value[7]}</td>    <!--　KeyのValueのIndex -->
 						</c:forEach>
                 	</tr>
             	</c:forEach>

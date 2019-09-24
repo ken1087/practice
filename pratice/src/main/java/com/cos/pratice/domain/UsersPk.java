@@ -7,10 +7,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Embeddable //Primaryのオブジェクトを作るためのAnnotation
+@Embeddable    //Primaryのオブジェクトを作るためのAnnotation
 @NoArgsConstructor		
-@AllArgsConstructor	//コンストラクタ
-@Data	//Getter, Setter
+@AllArgsConstructor	    //コンストラクタ
+@Data    //Getter, Setter
 public class UsersPk implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

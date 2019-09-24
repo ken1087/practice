@@ -53,21 +53,21 @@
             		<tr>
             			
             			<c:forEach var = "item" items="${user}">
-            				<c:set var="pk" value="${item.key}"/>
-		            		<c:forEach items="${fn:split(pk,'|')}" var="items">
+            				<c:set var="pk" value="${item.key}"/>	<!-- 格納したデータのKeyをpk変数にいれる -->
+		            		<c:forEach items="${fn:split(pk,'|')}" var="items">	<!-- pk変数にあるprimarykeyを'|'で分ける　-->
 		            			<!--Primary　Keyの項目5個  -->
-		                   		<td>${items}</td>
+		                   		<td>${items}</td>	<!-- 分けたKeyを順番で書く-->
 		            		</c:forEach>
-            				<td>${item.value[0]}</td>
-	                   		<td>${item.value[1]}</td>
-	                   		<td>${item.value[2]}</td>
-	                   		<td>${item.value[3]}</td>
-	                   		<td>${item.value[4]}</td>
-	                   		<td>${item.value[5]}</td>
-	                   		<td>${item.value[6]}</td>
-	                   		<td>${item.value[7]}</td>
-	                   		<td>${item.value[8]}</td>
-	                   		<td>${item.value[9]}</td>
+            				<td>${item.value[0]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[1]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[2]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[3]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[4]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[5]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[6]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[7]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[8]}</td>	<!--　KeyのValueの配列Index -->
+	                   		<td>${item.value[9]}</td>	<!--　KeyのValueの配列Index -->
             			</c:forEach>
                    		
                    		<!--項目10個  -->
@@ -78,52 +78,36 @@
         <div class="downbutton">
             <input type="button" id="download" value="TEXT DownLoad">
         </div>
-        
 	</div>
-<script> //CSV FILE Download
+<script>
     function download_csv(csv, filename) {
         var csvFile;
         var downloadLink;
-
-        // CSV FILE
-        csvFile = new Blob([csv], {type: "text/csv"});	//データ保存するBlob関数に配列とTypeを入力
-
-        // Download link
-        downloadLink 						= document.createElement("a");	//	a domを作成
-
-        // File name
-        downloadLink.download 		= filename;	//filenameを付ける
-
-        // We have to create a link to the file
-        downloadLink.href 				= window.URL.createObjectURL(csvFile);	//作成したa domにlinkを付ける
-
-        // Make sure that the link is not displayed
-        downloadLink.style.display 	= "none";	// 作成したa linkを見えないようにする
-
-        // Lanzamos
-        downloadLink.click();	//自動にClickする
+        csvFile = new Blob([csv], {type: "text/csv"});	    //データ保存するBlob関数に配列とTypeを入力
+        downloadLink 						= document.createElement("a");    //a domを作成
+        downloadLink.download 		= filename;    //filenameを付ける
+        downloadLink.href 				= window.URL.createObjectURL(csvFile);    //作成したa domにlinkを付ける
+        downloadLink.style.display 	= "none";    //作成したa linkを見えないようにする
+        downloadLink.click();    //自動にClickする
     }
 
     function export_table_to_csv(html, filename) {
-    	var csv = [];	//配列宣言
-    	var rows = document.querySelectorAll("#download_table tr");	//Tableのtrを全部探す
+    	var csv = [];    //配列宣言
+    	var rows = document.querySelectorAll("#download_table tr");    //Tableのtrを全部探す
     	
-        for (var i = 0; i < rows.length; i++) {	//trの数でfor文を利用する
-    		var row = [], cols = rows[i].querySelectorAll("td, th");	//cols = tr[i]の中にあるtd or thを全部探す
+        for (var i = 0; i < rows.length; i++) {    //trの数でfor文を利用する
+    		var row = [], cols = rows[i].querySelectorAll("td, th");    //cols = tr[i]の中にあるtd or thを全部探す
     		
             for (var j = 0; j < cols.length; j++) 
-                row.push(cols[j].innerText);	//row配列にcolsのTextを挿入
-            
-    		csv.push(row.join(","));	//csv配列に一つにした値を渡す
+                row.push(cols[j].innerText);    //row配列にcolsのTextを挿入
+    		csv.push(row.join(","));    //csv配列に一つにした値を渡す
     	}
-
-        // Download CSV
-        download_csv(csv.join("\n"), filename);	//download_csvの関数にcsvとファイル名を渡す
+        download_csv(csv.join("\n"), filename);    //download_csvの関数にcsvとファイル名を渡す
     }
 
-    document.querySelector("#download").addEventListener("click", function () {	//　downloadと書いてあるIdをClickすると
-        var html = document.querySelector("#download_table").outerHTML;	//download_tableというClassの値を探す
-    	export_table_to_csv(html, "table.csv");	//	tableと保存するファイル名を関数export_table_to_csvに渡す
+    document.querySelector("#download").addEventListener("click", function () {    //downloadと書いてあるIdをClickすると
+        var html = document.querySelector("#download_table").outerHTML;    //download_tableというClassの値を探す
+    	export_table_to_csv(html, "table.csv");    //tableと保存するファイル名を関数export_table_to_csvに渡す
     });
 </script>
 </body>

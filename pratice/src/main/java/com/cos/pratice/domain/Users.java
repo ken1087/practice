@@ -39,9 +39,9 @@ public class Users {
 	@Column(length=10)
 	private String country;
 	@Column
-	@CreationTimestamp	//自動カウンター
+	@CreationTimestamp    //自動カウンター
 	private LocalDate createDate;
 	@Column
-	@CreationTimestamp	//自動カウンター
+	@CreationTimestamp    //自動カウンター
 	private LocalDate updateDate;
 }
